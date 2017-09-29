@@ -1,0 +1,18 @@
+var Xxx = React.createClass({
+       render: function() {
+         return (
+           <div>
+           <h2>{this.props.title}</h2>
+           <h3>{this.props.genre}</h3>
+           </div>
+         );
+       }
+     });
+
+     ReactDOM.render(
+      <div>
+       <Xxx title="blue Moon" genre="romance"/>
+       <Xxx title="avengers" genre="action"/>
+       <Xxx title="death note" genre="thriller"/>
+
+      </div>, document.getElementById('example'));
