@@ -1,0 +1,34 @@
+<body>
+
+  <div id="container"></div>
+
+  <script type="text/babel">
+     //this will create component called Comment
+     var Comment = React.createClass({
+       edit: function() {
+         alert("editing comment");
+       },
+       remove: function() {
+         alert("Removing comment");
+       },
+       render: function() {
+         return (
+                  <div className="commentContainer">
+                       <div className="commentText"><h1>{this.props.children}</h1></div>
+                       <button onClick={this.edit} className="button-primary">Edit</button>
+                       <button onClick={this.remove} className="button-danger">Remove</button>
+                  </div>
+         );
+       }
+     });
+
+     ReactDOM.render(
+       <div className="board">
+            <Comment>I am hahahha</Comment>
+            <Comment>Beans</Comment>
+            <Comment>Tuna</Comment>
+      </div>,
+       document.getElementById('container'));
+  </script>
+
+</body>
